@@ -1,0 +1,95 @@
+@import url(fonts/poppins/poppins.css);
+@import url(global.css);
+@import url(navbar.css);
+
+.content .logo {
+    margin-bottom: 35px;
+}
+
+.content .login-container {
+    background: #fff;
+    box-shadow: 4px 4px 50px rgba(0, 0, 0, .25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 260px;
+    padding: 18px 26px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.content .login-container h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF5E5E;
+}
+
+.content .login-container hr {
+    background: #FF5E5E;
+    height: 1px;
+    outline: 0;
+    border: 0;
+    width: 100%;
+    margin: 8px 0 22px;
+}
+
+.content .login-container .input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.login-container .input-container label {
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.login-container .input-container input {
+    margin-bottom: 10px;
+    border-radius: 3px;
+    border-style: inset;
+    font-size: 10px;
+    border: 0.5px solid rgb(105, 105, 105);
+}
+
+.row1 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.row1 .remember-container {
+    display: flex;
+    align-items: center;
+}
+
+.row1 .check-box {
+    width: 12px;
+    height: 12px;
+    background: lightblue;
+    margin-right: 5px;
+}
+
+.row1 a {
+    color: #FF5E5E;
+}
+
+.login-container .login-btn {
+    width: 120px;
+    background: #FF5E5E;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    margin: 16px 0 5px;
+}
+
+.row2 {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    margin-bottom: 22px;
+}

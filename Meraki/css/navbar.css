@@ -1,0 +1,28 @@
+.container .bottom-nav {
+    background: #F8F7F7;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    border-radius: 20px;
+    z-index: 999;
+}
+
+.container .bottom-nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.bottom-nav ul li a {
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.bottom-nav a img {
+    height: 25px;
+    width: 25px;
+}
