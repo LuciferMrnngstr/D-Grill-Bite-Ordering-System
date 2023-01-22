@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <form class="form-container invalid" method="post">
+                <h1>Meraki | Register</h1>
+                <hr class="line">
+                <div class="row1">
+                    <div class="column">
+                        <label for="customer-type">Customer Type</label>
+                        <select name="customer-type" id="customer-type">
+                            <option value="none">Select</option>
+                        </select>
+                    </div>
+                    <div class="column">
+                        <label for="department">Department</label>
+                        <select name="department" id="department">
+                            <option value="none">Select</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <label for="firstname">Firstname</label>
+                    <input type="text" name="firstname" id="firstname">
+                    <div class="error">
+                        <p>Invalid firstname. Please try again.</p>
+                    </div>
+                    <label for="lastname">Lastname</label>
+                    <input type="text" name="lastname" id="lastname">
+                    <div class="error">
+                        <p>Invalid lastname. Please try again.</p>
+                    </div>
+                    <label for="contact-number">Contact Number</label>
+                    <input type="text" name="contact-number" id="contact-number">
+                    <div class="error">
+                        <p>Invalid contact no.. Please try again.</p>
+                    </div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="sample132@wmsu.edu.ph">
+                    <div class="error">
+                        <p>Invalid email. Please try again.</p>
+                    </div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <div class="error">
+                        <p>Invalid password. Please try again.</p>
+                    </div>
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" name="confirm-password" id="confirm-password">
+                    <div class="error">
+                        <p>password didn't match. Please try again.</p>
+                    </div>
+                </div>
+                <input type="submit" name="login" class="submit-btn" value="Register">
+                <div class="row2">
+                    <p>Already have an account?</p>
+                    <a href="login.html">Login</a>
+                </div>
+            </form>
+        </div>
+
+        <nav class="bottom-nav">
+            <ul>
+                <li>
+                    <a href="#" class="nav-items active">
+                        <div><img src="../icons/navbar/home.svg"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-items">
+                        <div><img src="../icons/navbar/heart.svg"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-items">
+                        <div><img src="../icons/navbar/bag.svg"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-items">
+                        <div><img src="../icons/navbar/profile.svg"></div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <script src="../script/app.js"></script>
+</body>
+
+</html>

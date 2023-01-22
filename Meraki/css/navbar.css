@@ -1,6 +1,6 @@
 .container .bottom-nav {
     background: #F8F7F7;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     display: flex;
     width: 100%;
@@ -11,18 +11,38 @@
 
 .container .bottom-nav ul {
     display: flex;
+    width: 100%;
+}
+
+.bottom-nav ul li {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.bottom-nav ul li a {
+    display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
 }
 
-.bottom-nav ul li a {
+.bottom-nav ul li div {
     display: flex;
-    padding: 5px;
-    border-radius: 10px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
-.bottom-nav a img {
+.bottom-nav ul li a:hover div {
+    background: rgba(255, 94, 94, .3);
+}
+
+.bottom-nav ul li a.active div {
+    background: #FF5E5E;
+}
+
+.bottom-nav ul li a img {
     height: 25px;
     width: 25px;
 }
