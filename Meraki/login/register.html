@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Meraki | Register</title>
     <link rel="stylesheet" href="../css/register.css">
 </head>
 
 <body>
     <div class="container">
         <div class="content">
-            <form class="form-container invalid" method="post">
-                <h1>Meraki | Register</h1>
-                <hr class="line">
+            <form class="form-container" method="post">
+                <h1>Register</h1>
+                <hr>
                 <div class="row1">
                     <div class="column">
                         <label for="customer-type">Customer Type</label>
@@ -33,32 +33,37 @@
                     <label for="firstname">Firstname</label>
                     <input type="text" name="firstname" id="firstname">
                     <div class="error">
-                        <p>Invalid firstname. Please try again.</p>
+                        <p>Invalid firstname.</p>
+                    </div>
+                    <label for="middlename">Middlename <span>(optional)</span></label>
+                    <input type="text" name="middlename" id="middlename">
+                    <div class="error">
+                        <p>Invalid middlename.</p>
                     </div>
                     <label for="lastname">Lastname</label>
                     <input type="text" name="lastname" id="lastname">
                     <div class="error">
-                        <p>Invalid lastname. Please try again.</p>
+                        <p>Invalid lastname.</p>
                     </div>
                     <label for="contact-number">Contact Number</label>
                     <input type="text" name="contact-number" id="contact-number">
                     <div class="error">
-                        <p>Invalid contact no.. Please try again.</p>
+                        <p>Invalid contact no..</p>
                     </div>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" placeholder="sample132@wmsu.edu.ph">
                     <div class="error">
-                        <p>Invalid email. Please try again.</p>
+                        <p>Invalid email.</p>
                     </div>
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password">
                     <div class="error">
-                        <p>Invalid password. Please try again.</p>
+                        <p>Invalid password.</p>
                     </div>
                     <label for="confirm-password">Confirm Password</label>
                     <input type="password" name="confirm-password" id="confirm-password">
                     <div class="error">
-                        <p>password didn't match. Please try again.</p>
+                        <p>password didn't match.</p>
                     </div>
                 </div>
                 <input type="submit" name="login" class="submit-btn" value="Register">
