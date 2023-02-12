@@ -154,7 +154,7 @@
     row-gap: 20px;
     column-gap: 20px;
     margin-bottom: 10px;
-    min-height: calc(100vh - 455px);
+/*     min-height: calc(100vh - 455px); */
 }
 
 .content .item-container .items {
