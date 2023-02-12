@@ -1,0 +1,48 @@
+@import url(login.css);
+
+.content .form-container {
+    transform: translateY(50%);
+}
+
+.form-container .row1 {
+    margin-bottom: 4px;
+}
+
+.form-container .column {
+    width: 48%;
+}
+
+.form-container select {
+    background: transparent;
+}
+
+.form-container label {
+    font-size: 11px;
+}
+
+.form-container label span {
+    font-size: 8px;
+    color: #FF8888;
+}
+
+.form-container input {
+    margin-bottom: 4px;
+}
+
+.form-container .column select {
+    width: 100%;
+    border-radius: 3px;
+    border: 0.5px solid rgb(105, 105, 105);
+}
+
+.form-container .submit-btn {
+    margin-top: 8px;
+}
+
+.form-container .row2 {
+    margin: 0;
+}
+
+.error {
+    margin: 0;
+}
