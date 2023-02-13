@@ -4,6 +4,7 @@
 .container .content {
     width: 100%;
     padding: 20px 10px;
+    gap: 15px;
 }
 
 .content .food-product-container {
