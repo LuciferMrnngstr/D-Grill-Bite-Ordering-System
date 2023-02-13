@@ -6,5 +6,6 @@
     $login = '';
     $register = '';
     $home = '';
+    $cart_nav = '';
 
 ?>

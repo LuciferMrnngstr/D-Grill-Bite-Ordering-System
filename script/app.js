@@ -9,3 +9,11 @@ navItems.forEach(navItem => {
         navItem.classList.add('active');
     });
 });
+
+// add to cart
+const addToCartBtn = document.querySelector('#add-to-cart');
+const descContainer = document.querySelector('.desc-container.open');
+
+addToCartBtn.addEventListener('click', () => {
+    descContainer.classList.add('active');
+});

@@ -1,0 +1,78 @@
+@import url(global.css);
+@import url(home.css);
+
+.container .content {
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.content .food-product-container {
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .25);
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+.food-product-container .img-container,
+.food-product-container .action-container {
+    display: flex;
+    justify-content: center;
+}
+
+.food-product-container .img-container {
+    height: 60px;
+    width: 80px;
+}
+
+.food-product-container .img-container img {
+    width: 80px;
+    border-radius: 5px;
+}
+
+.food-product-container .food-description-container {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.item-price {
+    font-weight: 500;
+    font-size: 18px;
+    color: #FF5E5E;
+}
+
+.item-price span {
+    font-size: 20px;
+    color: #FF5E5E;
+}
+
+.food-product-container .action-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 60%;
+    transform: rotate(90deg);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.food-product-container .action-container:active {
+    background: #FFCBCB;
+}
+
+.food-product-container .action-container span {
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    display: block;
+    background: grey;
+    margin-right: 3px;
+}
+
+.food-product-container .action-container span:last-child {
+    margin: 0;
+}

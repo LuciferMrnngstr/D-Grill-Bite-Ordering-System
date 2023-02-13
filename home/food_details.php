@@ -41,12 +41,8 @@
     </div>
 
     <div class="desc-container">
-        <h3>
-            <?= $data['name']; ?>
-        </h3>
-        <h4><span>₱</span>
-            <?= $data['price']; ?>
-        </h4>
+        <h3><?= $data['name']; ?></h3>
+        <h4><span>₱</span><?= $data['price']; ?></h4>
 
         <div class="food-description">
             <p>
@@ -83,12 +79,30 @@
         <!-- <label for="quantity">Quantity: </label>
         <input type="number" id="quantity" name="quantity" min="1" max="20" required> -->
         <div class="submit-btn-container">
-            <button class="submit-btn">Add to Cart</button>
+            <button class="submit-btn" id="add-to-cart">Add to Cart</button>
         </div>
     </div>
 
-    <form method="post" class="food-option-container" id="food-option-container">
-        sdsd
+    <form method="post" class="desc-container open">
+        <h3><?= $data['name']; ?></h3>
+        <h4><span>₱</span><?= $data['price']; ?></h4>
+
+        <div class="food-input-info">
+            <div class="title-with-line-cont">
+                <h1>OPTION</h1>
+                <hr>
+            </div>
+
+            <div class="title-with-line-cont">
+                <h1>QUANTITY</h1>
+                <hr>
+            </div>
+            <input type="number" name="quantity" value="1" min="1" max="5">
+        </div>
+
+        <div class="submit-btn-container">
+            <input type="submit" name="submit" class="submit-btn" value="Add to Cart">
+        </div>
     </form>
 </div>
 

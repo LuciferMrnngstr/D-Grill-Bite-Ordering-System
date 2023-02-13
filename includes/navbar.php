@@ -11,7 +11,7 @@
             </a>
         </li>
         <li>
-            <a href="#" class="nav-items">
+            <a href="../cart/cart.php" class="nav-items<?= $cart_nav; ?>">
                 <div><img src="../icons/navbar/bag.svg"></div>
             </a>
         </li>

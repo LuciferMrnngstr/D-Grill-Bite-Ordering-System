@@ -60,7 +60,7 @@
 }
 
 .container .content .title-with-line-cont h1 {
-    width: 20%;
+    margin-right: 10px;
 }
 
 .content .submit-btn-container {
@@ -77,21 +77,21 @@
 
 .content .submit-btn-container .submit-btn {
     width: 100%;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 2px;
     border-radius: 15px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, .25);
 }
 
-.food-option-container {
+.desc-container.open {
     width: 100%;
     min-height: 485px;
-    background: grey;
     position: fixed;
-    bottom: 0;
+    bottom: -500px;
     z-index: 0;
+    transition: 0.5s ease;
 }
 
-.food-option-container.active {
-    bottom: -500px;
+.desc-container.open.active {
+    bottom: 0;
 }
