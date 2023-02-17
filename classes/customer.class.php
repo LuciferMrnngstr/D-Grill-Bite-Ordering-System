@@ -1,4 +1,4 @@
-    <?php
+<?php
 
     include_once 'database.php';
 
@@ -35,42 +35,34 @@
             return $data;
         }
 
-        function register1($cust_type, $department, $firstname, $middlename, $lastname, $contact_num, 
+        function register($cust_type, $department, $firstname, $middlename, $lastname, $contact_num, 
             $email, $password){
 
-            $sql = 'INSERT INTO customer(email, password, firstName, middleName, lastName, contactNo, 
-                cust_type, department) VALUES (:email, :password, :firstname, :middlename, :lastname, 
-                :contact_num, :cust_type, :department);';
-            
-            $query = $this->db->connect()->prepare($sql);
-            $query->bindParam(':email', $email);
-            $query->bindParam(':password', $password);
-            $query->bindParam(':firstname', $firstname);
-            $query->bindParam(':middlename', $middlename);
-            $query->bindParam(':lastname', $lastname);
-            $query->bindParam(':contact_num', $contact_num);
-            $query->bindParam(':cust_type', $cust_type);
-            $query->bindParam(':department', $department);
-
-            if($query->execute()){
-                return true;
-            }
-            else{
-                return false;
-            }
-        }
-
-        function register($cust_type, $department, $firstname, $lastname, $contact_num, 
-            $email, $password){
-
-            $sql = 'INSERT INTO customer(email, password, firstName, lastName, contactNo, 
+            if(strlen($middlename) <= 0){
+                $sql = 'INSERT INTO customer(email, password, first_name, last_name, contact_no, 
                 cust_type, department) VALUES (:email, :password, :firstname, :lastname, 
                 :contact_num, :cust_type, :department);';
+            }
+            else{
+                $sql = 'INSERT INTO customer(email, password, firstName, middleName, lastName, contactNo, 
+                cust_type, department) VALUES (:email, :password, :firstname, :middlename, :lastname, 
+                :contact_num, :cust_type, :department);';
+            }
             
             $query = $this->db->connect()->prepare($sql);
             $query->bindParam(':email', $email);
             $query->bindParam(':password', $password);
             $query->bindParam(':firstname', $firstname);
+            if(strlen($middlename) > 0){
+                if(strlen($middlename) == 1){
+                    $middlename = $middlename . '.';
+                    $query->bindParam(':middlename', $middlename);
+                }
+                else{
+                    $query->bindParam(':middlename', $middlename);
+                }
+
+            }
             $query->bindParam(':lastname', $lastname);
             $query->bindParam(':contact_num', $contact_num);
             $query->bindParam(':cust_type', $cust_type);

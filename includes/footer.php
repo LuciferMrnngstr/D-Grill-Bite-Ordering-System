@@ -1,6 +1,6 @@
         </div>
 
-        <script src="../script/app.js"></script>
+        <script src="../../script/app.js"></script>
     </body>
 
 </html>

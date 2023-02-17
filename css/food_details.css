@@ -12,6 +12,7 @@
 .container .content {
     padding: 0;
     width: 100%;
+    overflow: hidden;
 }
 
 .content .img-container {
@@ -33,6 +34,7 @@
     padding: 25px 20px;
     border-radius: 35px 35px 0 0;
     position: relative;
+    z-index: 1;
 }
 
 .content .desc-container h3 {
@@ -85,7 +87,6 @@
 
 .desc-container.open {
     width: 100%;
-    min-height: 485px;
     position: fixed;
     bottom: -500px;
     z-index: 0;
@@ -94,4 +95,5 @@
 
 .desc-container.open.active {
     bottom: 0;
+    z-index: 1;
 }

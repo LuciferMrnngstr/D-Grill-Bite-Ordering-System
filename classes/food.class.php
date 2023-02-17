@@ -9,7 +9,7 @@
         }
 
         function render(){
-            $sql = 'SELECT * FROM food;';
+            $sql = 'SELECT * FROM food_product;';
 
             $query = $this->db->connect()->prepare($sql);
             
@@ -21,10 +21,10 @@
         }
 
         function fetch($id){
-            $sql = 'SELECT * FROM food WHERE food_id=:food_id;';
+            $sql = 'SELECT * FROM food_product WHERE food_product_id=:food_product_id;';
 
             $query = $this->db->connect()->prepare($sql);
-            $query->bindParam(':food_id', $id);
+            $query->bindParam(':food_product_id', $id);
 
             if($query->execute()){
                 $data = $query->fetch();

@@ -25,7 +25,7 @@
         if(empty($_POST['middlename'])){
             return true;
         }
-        else if(strlen(trim($_POST['middlename'])) < 1){
+        else if(strlen(trim($_POST['middlename'])) < 1 || !strlen(trim($_POST['middlename'])) > 2){
             return false;
         }
         return true;
