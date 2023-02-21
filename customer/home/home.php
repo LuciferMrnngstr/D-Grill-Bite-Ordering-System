@@ -33,7 +33,7 @@
         <div class="search-container">
             <input type="text" name="search" placeholder="Search food or beverage">
             <a href="#">
-                <img src="../../icons/search.svg">
+                <img src="../../icons/Search.svg">
             </a>
         </div>
 
