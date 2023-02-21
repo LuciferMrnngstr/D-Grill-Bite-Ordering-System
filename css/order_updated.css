@@ -1,0 +1,16 @@
+@import url(global.css);
+@import url(order_details.css);
+
+.container .food-items-container .top-cont {
+    justify-content: flex-end;
+}
+
+.btn-round {
+    position: fixed;
+    width: 95%;
+    bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 2px;
+}

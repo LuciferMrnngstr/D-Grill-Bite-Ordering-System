@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Feb 18, 2023 at 10:59 AM
--- Server version: 10.5.15-MariaDB-cll-lve
--- PHP Version: 7.2.34
+-- Host: 127.0.0.1
+-- Generation Time: Feb 21, 2023 at 09:32 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -85,14 +85,8 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`cart_id`, `customer_id`, `food_product_id`, `quantity`, `sub_total`, `created_at`, `updated_at`) VALUES
-(6, 1, 2, 5, 125, '2023-02-17 07:28:03', '2023-02-17 07:28:03'),
-(7, 1, 2, 2, 50, '2023-02-17 07:28:44', '2023-02-17 07:28:44'),
-(8, NULL, 1, 1, 20, '2023-02-17 07:55:14', '2023-02-17 07:55:14'),
-(9, NULL, 2, 1, 25, '2023-02-17 08:36:06', '2023-02-17 08:36:06'),
-(10, 19, 2, 1, 25, '2023-02-17 08:43:07', '2023-02-17 08:43:07'),
-(11, 19, 1, 1, 20, '2023-02-17 08:43:33', '2023-02-17 08:43:33'),
-(12, NULL, 2, 1, 25, '2023-02-17 08:44:40', '2023-02-17 08:44:40'),
-(13, NULL, 2, 1, 25, '2023-02-18 09:18:26', '2023-02-18 09:18:26');
+(14, 1, 1, 3, 60, '2023-02-21 07:06:18', '2023-02-21 07:06:18'),
+(15, 1, 2, 2, 50, '2023-02-21 07:32:54', '2023-02-21 07:32:54');
 
 -- --------------------------------------------------------
 
@@ -119,8 +113,7 @@ CREATE TABLE `customer` (
 
 INSERT INTO `customer` (`customer_id`, `email`, `password`, `first_name`, `middle_name`, `last_name`, `contact_no`, `cust_type`, `department`, `created_at`) VALUES
 (1, 'customer1@wmsu.edu.ph', 'customerr', 'Ahmad Rhidzkhan', 'Ahmad', 'Daud', '09972517522', 'Student', 'CCS', '2023-02-01 23:12:54'),
-(2, 'customer2@wmsu.edu.ph', 'customerr', 'Faseeh', 'Rojas', 'Lines', '09123456789', 'Student', 'CSM', '2023-02-01 23:12:54'),
-(19, 'customer5@wmsu.edu.ph', 'customerr', 'kurapika', NULL, 'zoldics', '09123456789', 'Student', 'CCS', '2023-02-17 08:42:22');
+(22, 'customer2@wmsu.edu.ph', 'customerr', 'Faseeh', 'Rojas', 'Lines', '09972517522', 'Student', 'CCS', '2023-02-21 01:16:57');
 
 -- --------------------------------------------------------
 
@@ -159,9 +152,11 @@ INSERT INTO `food_product` (`food_product_id`, `name`, `price`, `description`, `
 
 CREATE TABLE `orders` (
   `order_id` int(11) NOT NULL,
-  `cart_id` int(11) NOT NULL,
-  `total_price` int(11) NOT NULL,
-  `for_date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `customer_id` int(11) NOT NULL,
+  `food_product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `for_date` timestamp NOT NULL DEFAULT current_timestamp(),
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -170,16 +165,9 @@ CREATE TABLE `orders` (
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`order_id`, `cart_id`, `total_price`, `for_date`, `created_at`, `updated_at`) VALUES
-(45, 6, 125, '2023-02-17 07:28:10', '2023-02-17 07:28:10', '2023-02-17 07:28:10'),
-(46, 6, 125, '2023-02-17 07:28:48', '2023-02-17 07:28:48', '2023-02-17 07:28:48'),
-(47, 7, 175, '2023-02-17 07:28:48', '2023-02-17 07:28:48', '2023-02-17 07:28:48'),
-(48, 8, 20, '2023-02-17 07:56:07', '2023-02-17 07:56:07', '2023-02-17 07:56:07'),
-(49, 8, 20, '2023-02-17 07:56:10', '2023-02-17 07:56:10', '2023-02-17 07:56:10'),
-(50, 8, 20, '2023-02-17 08:35:28', '2023-02-17 08:35:28', '2023-02-17 08:35:28'),
-(51, 8, 20, '2023-02-17 08:45:17', '2023-02-17 08:45:17', '2023-02-17 08:45:17'),
-(52, 9, 45, '2023-02-17 08:45:17', '2023-02-17 08:45:17', '2023-02-17 08:45:17'),
-(53, 12, 70, '2023-02-17 08:45:17', '2023-02-17 08:45:17', '2023-02-17 08:45:17');
+INSERT INTO `orders` (`order_id`, `customer_id`, `food_product_id`, `quantity`, `status`, `for_date`, `created_at`, `updated_at`) VALUES
+(50, 1, 1, 3, 'PENDING', '2023-02-21 07:49:33', '2023-02-21 07:49:33', '2023-02-21 07:49:33'),
+(51, 1, 2, 2, 'PENDING', '2023-02-21 07:49:33', '2023-02-21 07:49:33', '2023-02-21 07:49:33');
 
 -- --------------------------------------------------------
 
@@ -250,7 +238,8 @@ ALTER TABLE `food_product`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`order_id`),
-  ADD KEY `cart_id` (`cart_id`);
+  ADD KEY `customer_id` (`customer_id`),
+  ADD KEY `food_product_id` (`food_product_id`);
 
 --
 -- Indexes for table `vendor`
@@ -279,13 +268,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `cart_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `food_product`
@@ -297,7 +286,7 @@ ALTER TABLE `food_product`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT for table `vendor`
@@ -326,7 +315,8 @@ ALTER TABLE `cart`
 -- Constraints for table `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`cart_id`) REFERENCES `cart` (`cart_id`);
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`),
+  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`food_product_id`) REFERENCES `food_product` (`food_product_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,0 +1,73 @@
+@import url(global.css);
+@import url(home.css);
+
+.container .content {
+    width: 100%;
+}
+
+.container .content .heading {
+    display: flex;
+    margin-top: 5px;
+    /* background: grey; */
+    width: 100%;
+    justify-content: space-between;
+}
+
+.content .heading h3 {
+    width: 60%;
+    font-weight: 500;
+}
+
+.content .heading .btn4 {
+    padding: 5px 15px;
+    display: flex;
+}
+
+.content .heading .btn4:hover {
+    background: #FFCBCB;
+}
+
+.content .heading .btn4 img {
+    height: 22px;
+    width: 22px;
+}
+
+.content .title-with-line-cont h1 {
+    margin-right: 10px;
+    color: #404040;
+}
+
+.content .order-items {
+    background: lightblue;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: #404040;
+    justify-content: space-between;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .25);
+}
+
+.content .order-items.pending {
+    background: #FFE2E2;
+}
+
+.content .order-items.to-prepare {
+    background: #FFF1F1;
+}
+
+.content .order-items.pickup {
+    background: #DEFDDD;
+}
+
+.content .order-items .cont3 {
+    font-size: 22px;
+}
+
+.container .content .title-with-line-cont{
+    margin: 5px 0 10px;
+}
