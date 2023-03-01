@@ -1,0 +1,93 @@
+@import url(order_pending.css);
+@import url(cart.css);
+
+.container .content.customer {
+    min-height: calc(100vh - 100px);
+    justify-content: flex-start;
+    padding-bottom: 0;
+}
+
+.container .content.customer .customer-details-cont {
+    margin-bottom: 15px;
+    background: #FFE2E2;
+}
+
+.container .content.customer .row1 {
+    width: 100%;
+    align-items: flex-start;
+    height: auto;
+    margin: 0;
+}
+
+.container .content.customer .row1 div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container .content.customer .row1 div .date {
+    font-size: 16px;
+}
+
+.container .content.customer .row1 div .status {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    font-size: 20px;
+    color: #FF5E5E;
+}
+
+.content .order-summary-container {
+    margin: 0 0 10px;
+}
+
+.content .order-summary-container h3 {
+    margin-bottom: 10px;
+}
+
+.content .order-summary-container hr {
+    width: 100%;
+    border: 1px dashed #333;
+    margin: 10px 0;
+}
+
+.content .order-summary-container .summary-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.summary-row:last-child .price-cont span {
+    font-size: 26px;
+}
+
+.summary-row:last-child .price-cont .price {
+    font-size: 24px;
+}
+
+.content .order-summary-container .summary-row .description {
+    display: flex;
+    max-width: 65%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-row .description .food-name {
+    max-width: 150px;
+    width: 100%;
+}
+
+.description .food-name .adds-on {
+    font-size: 14px;
+    margin-top: -5px;
+}
+
+.container .food-items-container {
+    margin: 0;
+}
