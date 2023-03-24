@@ -1,0 +1,76 @@
+.wrapper {
+    .top {
+        @include flexCenter(row, center, space-between);
+        position: relative;
+        background: #fff;
+        box-shadow: $boxShadow2;
+        height: 50px;
+        padding: 0 10px;
+        width: 100%;
+
+        header {
+            font-family: 'Atma';
+            font-size: $headerFont;
+        }
+
+        .logo {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        a {
+            font-size: 15px;
+            @include normalBtn;
+        }
+
+        button {
+            @include button3;
+            padding: 5px 8px;
+            display: flex;
+            align-items: center;
+            box-shadow: none;
+
+            &:hover {
+                background: $hoverColor;
+            }
+        }
+
+        .overlay {
+            @include inactiveOverlay;
+        }
+
+        .modal-box.notification {
+            @include inactiveModal;
+            height: calc(100vh - 110px);
+            bottom: 8px;
+            transform: translateY(100%);
+            border-radius: 8px;
+
+            .content {
+                height: 100%;
+                padding: 4px 8px;
+            }
+
+            .content.empty {
+                @include flexCenter(column, center, center);
+
+                header {
+                    color: $textColor;
+                }
+            }
+        }
+    }
+}
+
+.wrapper.active-modal {
+    .top {
+        .overlay {
+            @include activeOverlay;
+        }
+
+        .modal-box.notification {
+            @include activeModal;
+        }
+    }
+}

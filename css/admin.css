@@ -1,0 +1,514 @@
+@import url(global.css);
+@import url(navbar.css);
+
+.container .content {
+    padding: 0 10px;
+    min-height: calc(50vh - 110px);
+    height: calc(94vh - 115px);
+    padding-top: 4%;
+    padding-bottom: 4%;
+    z-index: 1;
+    position: relative;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 73vh;
+    z-index: 1;
+    position: relative;
+}
+
+.container .top, .container .admin-top {
+    width: 100%;
+    height: 95px;
+    padding: 0 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.container .admin-top {
+    height: 50px;
+}
+
+h4 {
+    margin-top: -5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.top .logo {
+    margin-top: 5px;
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+}
+
+.dashboard-container {
+    min-width: 340px;
+    height: 33%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.dashboard-container h4 {
+    font-size: 13px;
+}
+
+.order-container, .siteview-container, .average-container, .sales-container {
+    width: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.favorites-container {
+    width: 100%;
+}
+
+.container-box {
+    width: 100%;
+    height: 120px;
+    border-radius: 20px;
+    margin-top: 5px;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.box-content {
+    margin: 0;
+    width: 100%;
+    height: 80%;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: #FF5E5E;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.box-content h1 {
+    font-size: 40px;
+    margin-right: 10px;
+    font-weight: lighter;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, .2);
+}
+
+.box-content h5 {
+    font-weight: 100;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, .2);
+}
+
+.average-container h5, .sales-container h5 {
+    font-size: 18px;
+}
+
+.order-container .box-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard-container img {
+    margin-right: 5px;
+}
+
+.box-content .img-container {
+    background-image: url("../icons/items/adobong-atay.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, .2);
+}
+
+.favorite-text {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.favorite-name-price {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-bar, .search-bar input {
+    min-width: 340px;
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1px #323232 solid;
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(254, 94, 94);
+    min-width: 60px;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, .2);
+    z-index: 1;
+    right:0;
+    margin-top: 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.payment .dropdown-content  {
+    margin-top: 40px;
+}
+
+.table-container {
+    height: 100%;
+}
+
+.table-header {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    border-bottom: 1px black solid;
+}
+
+.sales-report-header {
+    border: 0;
+}
+
+.customer-name-column, .amount-column, .status-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sales-report-header .items-column, .sales-report-header .quantity-column, .sales-report-header .amount-column {
+    font-weight: 400;
+}
+
+.table-rows {
+    height: 400px;
+    overflow: auto;
+}
+
+.table-data {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(242, 233, 233);
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    border: 0;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+.table-data .status-data {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.sales-report-data {
+    font-size: 12px;
+}
+
+.filter-date {
+    margin-top: 8px;
+}
+
+.filter-text, .current-filter {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    justify-content:space-between;
+}
+
+.sales-report-search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.sales-report-search input {
+    margin-left: 5px;
+    min-width: 222px;
+}
+
+.sales-report-search h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.sales-report-rows {
+    height: 360px;
+    border-bottom: 1px black solid;
+}
+
+.sales-report-container {
+    margin-top: 10px;
+}
+
+.table-summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+}
+
+.table-summary h4 {
+    margin: 0;
+    width: fit-content;
+    color: rgb(21, 248, 59);
+}
+
+.store-button {
+    border: 0;
+    border-radius: 15px;
+    background-color: #FF5E5E;
+    min-width: 340px;
+    height: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.store-button h3 {
+    color:white; 
+    margin-left: 25px;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, .2);
+}
+
+.food-search {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    min-width: 340px;
+}
+
+.food-search input {
+    padding: 5px;
+    border: 1px #323232 solid;
+    border-radius: 5px;
+    min-width: 100px;
+    width: 169px;
+}
+
+.food-search h4 {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 6px;
+}
+
+.food-container {
+    height: 430px;
+    width: 355px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.food-selection-tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.food-selection-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.food-selection-buttons button {
+    background-color: white;
+    border: 0;
+    
+}
+
+.food-selection-buttons button.active {
+    font-weight: bold;
+}
+
+.food-selection-tab .separator {
+    width: 3px;
+    background-color: #FF5E5E;
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.add-new-food {
+    height: fit-content;
+    
+}
+
+.add-new-food button {
+    background-color: #FF5E5E;
+    border: 0;
+    border-radius: 5px;
+    width: 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-main-content {
+    height: 400px;
+    padding: 5px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 5px;
+    overflow-y: auto;
+    display: none;
+    animation: fadeEffect .5s;
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.food-box {
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 150px;
+    width: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-img-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.food-box .img-container {
+    background-color: #FF5E5E;
+}
+
+.food-options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 4px;
+}
+
+.food-box .img-container.liver-adobo {
+    width: 100%;
+    height: 100%;
+    background-image: url("../icons/items/adobong-atay.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.food-box .img-container.tortang-talong {
+    width: 100%;
+    height: 100%;
+    background-image: url("../icons/items/tortang-talong.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid black;
+}
+
+.input-container input {
+    padding: 5px;
+    border: 1px #323232 solid;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.saveBtn {
+    margin-top: 25px;
+    padding: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: #FF5E5E;
+    border: 0;
+    border-radius: 5px;
+}
+
+.upload-img {
+    background-image: url("../icons/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-nav ul li a.active div {
+    background: #F8F7F7;
+}

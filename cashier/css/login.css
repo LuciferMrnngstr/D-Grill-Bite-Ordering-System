@@ -1,0 +1,6 @@
+@import url(../../css/global.css);
+@import url(../../css/login.css);
+
+.container .content {
+    min-height: 100vh;
+}

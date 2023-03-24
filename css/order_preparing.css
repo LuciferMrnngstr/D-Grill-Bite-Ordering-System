@@ -1,0 +1,29 @@
+@import url(global.css);
+@import url(order_pending.css);
+
+.container .content {
+    padding-top: 15px;
+}
+
+.content .preparing-container {
+    background: #ffecec;
+    min-height: 250px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.content .preparing-container .img {
+    background: lightblue;
+    width: 200px;
+    height: 100px;
+}
+
+.content .preparing-container p {
+    font-size: 16px;
+    color: #333;
+}
