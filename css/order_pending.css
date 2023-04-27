@@ -1,0 +1,153 @@
+@import url(global.css);
+@import url(vendor_home.css);
+
+.content {
+    font-size: 12px;
+}
+
+.container .customer-details-cont {
+    background: #FFCBCB;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .25);
+    margin: 10px 0 25px;
+}
+
+.customer-container1,
+.customer-container2 {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    color: #303030;
+    justify-content: center;
+}
+
+.customer-container1 img {
+    height: 70px;
+    width: 70px;
+}
+
+.container .cust-name {
+    font-size: 14px;
+    margin: 10px 0 5px;
+}
+
+.container .customer-container2 p {
+    margin-bottom: 5px;
+}
+
+.container .customer-container2 .label {
+    font-size: 10px;
+    margin-top: 15px;
+}
+
+.container .customer-container2 .label {
+    font-size: 10px;
+    margin: 15px 0 -2px;
+}
+
+.container .customer-container2 .status {
+    font-size: 14px;
+    color: #FF5E5E;
+}
+
+.container .food-items-container {
+    margin-bottom: 70px;
+}
+
+.container .food-items-container .top-cont,
+.container .food-items-container .bottom-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .food-items-container .top-cont label {
+    width: 81%;
+    color: #FF5E5E;
+    cursor: pointer;
+}
+
+.container .food-items-container .top-cont .more-btn {
+    cursor: pointer;
+    display: flex;
+    padding-top: 7px;
+}
+
+hr {
+    margin: 5px 0 10px;
+}
+
+.container .food-items-container .food {
+    /* background: lightpink; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    color: #202020;
+}
+
+.container .food-items-container .food-product {
+    display: flex;
+    align-items: center;
+    /* background: grey; */
+    width: 75%;
+}
+
+.container .food-items-container .food-product img {
+    width: 100px;
+    height: 70px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.food-items-container .food-product .food-desc-cont .name {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.food-items-container .food-product .food-desc-cont .adds-on {
+    font-size: 13px;
+    color: #404040;
+}
+
+.container .food-items-container .bottom-cont {
+    padding-left: 20px;
+    align-items: center;
+}
+
+.container .food-items-container .bottom-cont p:first-child {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.container .food-items-container .bottom-cont .price-cont span {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.container .food-items-container .bottom-cont .price-cont .price {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.action-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: fixed;
+    padding: 0 10px;
+    bottom: 10px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.action-container .btn-round {
+    letter-spacing: 1px;
+    font-size: 16px;
+}
