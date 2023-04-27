@@ -1,0 +1,156 @@
+.wrapper {
+    .order-info {
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        height: calc(100vh - 50px);
+        width: 100%;
+        padding: 20px 10px;
+        overflow: auto;
+
+        .top-content {
+            // background: lightblue;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            .info {
+                @include flexCenter(row, center, space-between);
+                background: $containerColor;
+                width: 100%;
+                padding: 20px 25px;
+                border-radius: 10px;
+                box-shadow: $boxShadow2;
+                margin-bottom: 25px;
+
+                .left {
+                    @include flexCenter(column, center, center);
+                    height: 100%;
+
+                    .order-status {
+                        font-size: 24px;
+                        color: $primaryColor;
+                        margin-bottom: 10px;
+                        max-width: 130px;
+                        text-align: center;
+                    }
+
+                    .order-status:is(.preparing, .ready, .released, .recieved, .claimed) {
+                        color: $preparingColor;
+                    }
+
+                    .order-status.ready {
+                        font-size: 22px;
+                        margin: 0;
+                    }
+
+                    .payment-status {
+                        color: $primaryColor;
+                    }
+
+                    .payment-status.paid {
+                        color: $preparingColor;
+                    }
+
+                    .payment-method {
+                        font-size: 14px;
+                        color: $textColor;
+                    }
+                }
+
+                .right {
+                    display: flex;
+                    flex-direction: column;
+                    width: 50%;
+                    color: $textColor;
+                    font-size: 16px;
+                    gap: 10px;
+
+                    .details {
+                        display: flex;
+                        justify-content: space-between;
+                        text-align: center;
+
+                        .id {
+                            color: $primaryColor;
+                        }
+                    }
+
+                    .order-date {
+                        margin-top: 20px;
+                        text-align: center;
+
+                        .date {
+                            letter-spacing: 2px;
+                        }
+
+                        .label {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+            .food-items {
+                padding: 15px 0;
+                border-top: 1px solid $disableBtnColor;
+                border-bottom: 1px solid $disableBtnColor;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                height: 100%;
+
+                .items {
+                    @include flexCenter(row, center, space-between);
+
+                    img {
+                        width: 120px;
+                        border-radius: 8px;
+                    }
+
+                    .description {
+                        text-align: center;
+
+                        .name {
+                            font-size: 18px;
+                        }
+
+                        .quantity {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .below-content {
+            .instruction {
+                text-align: center;
+                margin-top: 20px;
+                padding: 0 15px;
+            }
+
+            .order-summary {
+                @include orderSummary;
+            }
+
+            .mark-paid {
+                @include proceedBtn;
+                background: #fff;
+                border: 1px solid $primaryColor;
+                box-shadow: none;
+                color: $primaryColor;
+                transition: background 0.3s;
+
+                &:hover {
+                    background: $hoverColor;
+                }
+            }
+
+            .mark {
+                @include proceedBtn;
+                margin-top: 10px;
+            }
+        }
+    }
+}
