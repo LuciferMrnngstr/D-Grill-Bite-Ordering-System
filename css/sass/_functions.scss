@@ -1,0 +1,148 @@
+@mixin flexCenter($direction, $align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin centerHorizontal {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin centerVertical {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin header {
+    font-size: $headerFont;
+    font-weight: 500;
+    color: $primaryColor;
+}
+
+@mixin withNav {
+    height: calc(100vh - 110px);
+    width: 100%;
+    padding: 0 10px;
+    overflow: auto;
+}
+
+@mixin container {
+    border: none;
+    border-radius: 8px;
+    box-shadow: $boxShadow2;
+}
+
+@mixin line {
+    border-bottom: 1px solid $primaryColor;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+@mixin submitBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    height: 45px;
+    width: 100%;
+    letter-spacing: 2px;
+    font-size: $nFont;
+    font-weight: 500;
+    background: $primaryColor;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@mixin plainBtn {
+    border: none;
+    background-color: transparent;
+}
+
+@mixin normalBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: $boxShadow2;
+    padding: 4px 12px;
+    background: $primaryColor;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@mixin button3 {
+    border: none;
+    font-size: $sFont;
+    font-weight: 500;
+    background: #fff;
+    color: $primaryColor;
+    border-radius: 5px;
+    box-shadow: $boxShadow2;
+    cursor: pointer;
+}
+
+@mixin button4 {
+    @include flexCenter(row, center, center);
+    border: 1px solid $primaryColor;
+    font-size: $sFont;
+    font-weight: 500;
+    background: #fff;
+    color: $primaryColor;
+    border-radius: 5px;
+    box-shadow: $boxShadow2;
+    cursor: pointer;
+}
+
+@mixin inactiveOverlay {
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    top: 0;
+    @include centerHorizontal;
+    z-index: 2;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+@mixin activeOverlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@mixin inactiveModal {
+    position: fixed;
+    z-index: 3;
+    background: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+@mixin activeModal {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+@mixin alert {
+    width: 95%;
+    max-width: 400px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #555;
+    text-align: center;
+    position: fixed;
+    z-index: 5;
+    bottom: -100px;
+    transition: 0.3s ease;
+}
+
+@mixin activeAlert {
+    bottom: 60px;
+}
