@@ -117,7 +117,7 @@
             ?>
 
             <div class="items-wrapper">
-                <a href="dish-info.php?food_id=<?= $food['food_id'] ?>" class="edit-btn"><img src="../icons/mix/edit.svg"></a>
+                <a href="dish-info.php?food_id=<?= $food['food_id'] ?>" class="edit-button"><img src="../icons/mix/edit.svg"></a>
                 
                 <a href="food_details.php?food_id=<?= $food['food_id']; ?>" class="items <?php if($food['availability'] === 'unavailable') echo 'unavailable' ?>">
                     <span class="label">item unavailable</span>
