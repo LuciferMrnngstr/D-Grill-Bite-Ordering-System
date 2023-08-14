@@ -1,0 +1,232 @@
+.wrapper {
+    .top {
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 0;
+        background: #fff;
+        box-shadow: $boxShadow2;
+        max-width: 400px;
+        min-height: 50px;
+        padding: 0 10px;
+        width: 100%;
+        z-index: 4;
+
+        .row1 {
+            @include flexCenter(row, center, space-between);
+            height: 50px;
+            width: 100%;
+
+
+            header {
+                font-family: 'Atma';
+                font-size: $headerFont;
+            }
+
+            .poppins {
+                font-family: 'Poppins';
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+
+            .back-btn {
+                width: 40px;
+                @include flexCenter(row, center, center);
+            }
+
+            .food_name {
+                font-family: "Poppins";
+                font-size: $nFont;
+            }
+
+            .logo {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .sign-in-btn {
+                font-size: 15px;
+                @include normalBtn;
+            }
+
+            .right {
+                display: flex;
+
+                button,
+                a {
+                    @include button3;
+                    padding: 5px 8px;
+                    display: flex;
+                    align-items: center;
+                    box-shadow: none;
+
+                    &:hover {
+                        background: $hoverColor;
+                    }
+                }
+
+                a {
+                    position: relative;
+
+                    p {
+                        position: absolute;
+                        color: #fff;
+                        font-size: 12px;
+                        border: 1px solid #fff;
+                        background: $primaryColor;
+                        text-align: center;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        top: 1px;
+                        right: 0;
+                    }
+                }
+
+                .notif {
+                    position: relative;
+
+                    .unread_count {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        font-size: 12px;
+                        padding: 0 7px;
+                        background: $primaryColor;
+                        color: #fff;
+                        border-radius: 50%;
+                        height: 18px;
+                        width: 18px;
+                        @include flexCenter(row, center, center);
+                    }
+                }
+            }
+        }
+
+        nav {
+
+            ul {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 50px;
+
+                li {
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    white-space: nowrap;
+
+                    a {
+                        @include flexCenter(row, center, center);
+                        height: 100%;
+                        font-size: $nFont;
+                    }
+                }
+
+                li.active {
+                    border-bottom: 3px solid $primaryColor;
+                }
+            }
+        }
+
+        .overlay {
+            @include inactiveOverlay;
+            z-index: 5;
+        }
+
+        .modal-box.notification {
+            @include inactiveModal;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 380px;
+            width: 95%;
+            height: calc(100vh - 110px);
+            border-radius: 8px;
+            z-index: 6;
+
+            .content {
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding: 6px;
+                gap: 5px;
+                position: relative;
+                overflow: auto;
+                padding-bottom: 35px;
+
+                header {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+
+                a.read {
+                    background: $containerColor2;
+                    color: lighten($color: $textColor, $amount: 25%);
+                }
+
+                a {
+                    color: $textColor;
+                    background: $hoverColor;
+                    width: 100%;
+                    @include flexCenter(row, center, center);
+                    border-radius: 8px;
+                    text-align: left;
+                    padding: 20px 12px 20px 8px;
+                    display: flex;
+                    gap: 5px;
+
+                    &:hover {
+                        background: $containerColor;
+                    }
+                }
+
+                input {
+                    position: fixed;
+                    background: white;
+                    border: none;
+                    width: 100%;
+                    padding: 8px 0;
+                    @include centerHorizontal;
+                    bottom: 0;
+                    cursor: pointer;
+                    color: $primaryColor;
+                    border-radius: 0 0 8px 8px;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .content.empty {
+                @include flexCenter(column, center, center);
+
+                header {
+                    color: $textColor;
+                    font-size: 20px;
+                    opacity: 1;
+                }
+
+                a,
+                input {
+                    opacity: 0;
+                    pointer-events: 0;
+                }
+            }
+        }
+    }
+}
+
+.top.active-notif {
+    .overlay {
+        @include activeOverlay;
+    }
+
+    .modal-box.notification {
+        @include activeModal;
+    }
+}

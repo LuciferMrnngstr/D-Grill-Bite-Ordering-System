@@ -1,0 +1,117 @@
+.wrapper {
+
+    .order-history,
+    .order-historyV {
+        height: calc(100vh - 100px);
+        width: 100%;
+
+        .empty {
+            height: calc(100% - 100px);
+        }
+
+        .order-container {
+            height: 100%;
+            padding: 15px 10px;
+            overflow: auto;
+
+            .item-wrappers {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .items {
+                    @include content;
+                    text-align: center;
+                    padding: 20px;
+                    background: #fff;
+                    transition: 0.3s ease;
+
+                    &:hover {
+                        background: $hoverColor;
+                    }
+
+                    .status {
+                        max-width: 120px;
+                        text-align: center;
+                        font-size: 20px;
+                    }
+
+                    .details {
+                        color: $textColor2;
+                        font-size: $sFont;
+
+                        .payment-status {
+                            color: $primaryColor;
+                        }
+                    }
+
+                    .price-cont {
+                        span {
+                            font-size: 22px;
+                        }
+
+                        h4 {
+                            font-size: 20px;
+                        }
+                    }
+                }
+
+                .items.claimed {
+                    .status {
+                        color: $preparingColor;
+                    }
+                }
+
+                .items.paid {
+                    .details {
+                        .payment-status {
+                            color: $preparingColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .order-historyV {
+        height: calc(100vh - 110px);
+
+        .empty {
+            height: 100%;
+        }
+
+        .sales-report {
+            margin-bottom: 10px;
+            border-bottom: 1px solid $primaryColor;
+            padding-bottom: 15px;
+
+            h1 {
+                font-weight: 500;
+                color: $secondTextColor;
+            }
+
+            .price-cont {
+                background: $containerColor;
+                @include flexCenter(row, center, center);
+                display: flex;
+                padding: 20px;
+                border-radius: 10px;
+
+                span {
+                    font-size: 34px;
+                }
+
+                h4 {
+                    font-size: 32px;
+                }
+            }
+        }
+
+        .item-wrappers {
+            h1 {
+                font-weight: 500;
+                color: $secondTextColor;
+            }
+        }
+    }
+}
